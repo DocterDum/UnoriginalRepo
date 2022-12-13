@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    color: rgb(255, 174, 187);
+    color: rgb(255, 255, 255);
     text-align: center;
     font-family: cursive;
     animation-name: fly-in-bottom;
@@ -42,7 +42,7 @@ ul:nth-child(2) {
 }
 
 #gear  {
-    color: rgb(255, 202, 202);
+    color: rgb(255, 255, 255);
     width: 200px;
     height: 200px;
     position: relative;
