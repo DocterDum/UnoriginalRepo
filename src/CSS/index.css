@@ -85,16 +85,4 @@ ul:nth-child(2) {
     }
 }
 
-@keyframes fly-in-right {
-    from{
-        transform: translateX(200%); 
-        opacity: 0%;
-    }
-    top{
-        transform: translateX(0%); 
-        opacity: 100%;
-    }
-}
-
-
 
