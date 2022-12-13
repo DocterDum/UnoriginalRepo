@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Yellowtail&display=swap');
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#particleCanvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: rgb(255, 174, 187);
+    text-align: center;
+    font-family: cursive;
+    animation-name: fly-in-bottom;
+    animation-duration: 2s;
+    user-select: none;
+}
+
+
+ul {
+    animation: fly-in-right 2s ease-in both;
+}
+
+ul:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.links {
+    opacity: 0%;
+    position: absolute;
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#gear  {
+    color: rgb(255, 202, 202);
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+#gearcontainer {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:nowrap;
+}
+
+#gearcontainer #gear {
+    transition: transform 3s;
+}
+
+#gearcontainer:hover #gear  {
+    transform:  translateX(-200%) rotate(720deg);    
+}
+
+#gearcontainer h2 {
+    transition: opacity 3s;
+}
+
+#gearcontainer:hover h2  {
+    opacity: 100%;
+}
+
+@keyframes fly-in-bottom {
+    from{
+        transform: translateY(200%); 
+        opacity: 20%;
+    }
+    top{
+        transform: translateY(0%); 
+        opacity: 100%;
+    }
+}
+
+@keyframes fly-in-right {
+    from{
+        transform: translateX(200%); 
+        opacity: 0%;
+    }
+    top{
+        transform: translateX(0%); 
+        opacity: 100%;
+    }
+}
+
+
+
