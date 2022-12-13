@@ -6,6 +6,12 @@ body {
     padding: 0;
 }
 
+.center {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
 #particleCanvas {
     position: absolute;
     display: block;
@@ -20,17 +26,25 @@ h1 {
     color: rgb(255, 255, 255);
     text-align: center;
     font-family: cursive;
-    animation-name: fly-in-bottom;
-    animation-duration: 2s;
     user-select: none;
 }
 
+.animatedTitle {
+    animation-name: fly-in-bottom;
+    animation-duration: 2s;
+}
 
 ul {
-    animation: fly-in-right 2s ease-in both;
+    opacity: 0%;
+    padding-left: 0;
+    animation-name: fly-in-right;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 ul:nth-child(2) {
+    animation-name: fly-in-right;
+    animation-duration: 2s;
     animation-delay: 2s;
 }
 
@@ -85,4 +99,16 @@ ul:nth-child(2) {
     }
 }
 
+@keyframes fly-in-right {
+    0%{
+        opacity: 0%;
+        transform: translateX(10%); 
+        visibility: visible;
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0%); 
+
+    }
+}
 
